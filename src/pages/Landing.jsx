@@ -9,7 +9,7 @@ const Landing = () => {
     <Container>
         <div className=" w-full h-screen bg-hero-bg bg-no-repeat bg-cover  ">
             <div className=" w-full h-2/4 flex justify-center items-center">
-                <img src={Logo} alt="" className=" rounded-full" />
+                <img src={Logo} alt="" className=" rounded-full w-1/3" />
             </div>
             <div className=" flex flex-col justify-end items-center h-2/4 pb-10 ">
                 <h1 className=' font-bold text-4xl text-white mb-5'>Rider App</h1>
