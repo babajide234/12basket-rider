@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { Link, Outlet } from 'react-router-dom'
+import React, { useState, useEffect } from 'react'
+import { Link, Outlet, useNavigate } from 'react-router-dom'
 import Container from '../components/Container'
 import { BsArrowLeft } from 'react-icons/bs'
 import { MdOutlineClose } from 'react-icons/md'
@@ -27,6 +27,14 @@ const Nav = ({ open,openMenu })=>{
 const Menu = ({ open,close })=>{
   const isLoggedIn = userSlice(state =>  state.isLoggedIn)
   const logout = userSlice(state =>  state.logout)
+  const navigate = useNavigate();
+
+
+  useEffect(() => {
+    if(!isLoggedIn){
+      navigate('/login');
+    }
+  }, [isLoggedIn])
 
   const log = ()=>{
     logout();
