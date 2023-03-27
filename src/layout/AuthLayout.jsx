@@ -9,7 +9,7 @@ const AuthLayout = () => {
   return (
     <Container>
         <div className=" w-full h-1/2 bg-auth-bg bg-cover bg-no-repeat bg-center rounded-bl-[30px] rounded-br-[30px] px-10 py-5 flex flex-col justify-end">
-            <Link to='/shop' className=' text-white text-3xl' ><FaRegCaretSquareLeft/></Link>
+            {/* <Link to='/shop' className=' text-white text-3xl' ><FaRegCaretSquareLeft/></Link> */}
             <div className=" w-full h-full flex justify-center items-center py-12">
               <img src={Logo} alt="12basket logo" className=" w-[140px] rounded-full" />
             </div>
