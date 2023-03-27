@@ -14,11 +14,20 @@ export const updateLocation = async (data) =>{
 }
 
 export const getDetails = async (data) =>{
-    return instance.post('rider/details', data)
+    return instance.post('account/details', data)
+}
+export const updateName = async (data) =>{
+    return instance.post('account/update-name', data)
+}
+export const updatePwd = async (data) =>{
+    return instance.post('account/change-password', data)
 }
 
 export const login = async (data) =>{
     return instance.post('account/login', data)
+}
+export const logout = async (data) =>{
+    return instance.post('account/logout', data)
 }
 
 export const getOrders = async (data) =>{

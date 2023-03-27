@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Inputs = ({placeholder, ...rest}) => {
+ const Inputs = ({placeholder, ...rest}) => {
   return (
     <div className="relative mt-10 z-0 mb-10 last-of-type:mb-9">
         <input 
@@ -11,3 +11,5 @@ export const Inputs = ({placeholder, ...rest}) => {
     </div>
   )
 }
+
+export default Inputs

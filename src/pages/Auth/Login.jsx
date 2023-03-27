@@ -1,6 +1,6 @@
 import { Formik } from 'formik'
 import React,{ useEffect, useState}from 'react'
-import { Inputs } from '../../components/Inputs';
+import Inputs from '../../components/Inputs';
 import userSlice from '../../store/userStore';
 import loaderSlice from '../../store/loaderStore';
 import Loader from '../../components/Loader';
@@ -13,7 +13,7 @@ const Login = () => {
 
     const initialValues = {
         email: 'kohok33145@oniecan.com',
-        password: '123456',
+        password: '123456789',
     };
 
     const handleSubmit = (values) => {

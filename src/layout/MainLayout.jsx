@@ -14,7 +14,7 @@ const Offline = ({status}) => {
 
 const Nav = ({ open,openMenu })=>{
   return (
-    <div className=" fixed top-10 left-1/2 transform -translate-x-1/2 w-[90%] mx-auto rounded-2xl flex justify-between z-50 px-5 py-4 bg-white shadow-2xl">
+    <div className=" fixed top-5 left-1/2 transform -translate-x-1/2 w-[90%] mx-auto rounded-2xl flex justify-between z-50 px-5 py-4 bg-white shadow-2xl">
         <button onClick={openMenu} className=' bg-white w-10 h-10 text-2xl font-bold rounded-full flex justify-center items-center'> <RiMenu2Line/> </button>
 
         {/* <label className="relative flex justify-between items-center group text-xl">
@@ -27,6 +27,7 @@ const Nav = ({ open,openMenu })=>{
 const Menu = ({ open,close })=>{
   const isLoggedIn = userSlice(state =>  state.isLoggedIn)
   const logout = userSlice(state =>  state.logout)
+
   const navigate = useNavigate();
 
 
@@ -47,7 +48,9 @@ const Menu = ({ open,close })=>{
 
       <div className=" flex flex-col justify-between w-full h-full">
         <div className="">
-          {/* <Link  to='/notifications' className=' border-b border-solid border-white py-4 flex items-center text-white font-bold text-xl'> <span className=" mr-5"><RiNotification3Line/></span> Notifications</Link> */}
+          <Link  to='/profile' className=' border-b border-solid border-white py-4 flex items-center text-white font-bold text-xl'> <span className=" mr-5"><RiNotification3Line/></span> Profile</Link>
+          <Link  to='/orders' className=' border-b border-solid border-white py-4 flex items-center text-white font-bold text-xl'> <span className=" mr-5"><RiNotification3Line/></span> Orders</Link>
+          <Link  to='/notifications' className=' border-b border-solid border-white py-4 flex items-center text-white font-bold text-xl'> <span className=" mr-5"><RiNotification3Line/></span> Notifications</Link>
         </div>
         {
           isLoggedIn ? 

@@ -7,6 +7,8 @@ const orderSlice = create(
     (set, get) => ({
         orders:[],
         order:{},
+        requests:null,
+        successfullOrders:null,
         setOrder:(value)=> {
             getOrders(value)
             .then((res)=> {
@@ -92,6 +94,36 @@ const orderSlice = create(
                 loaderSlice.setState({ isLoading: false });
             });
         },
+        getRequests:(value)=>{
+            getOrders(value)
+            .then((res)=> {
+                if(res.data.status == 'success'){
+                    set(state => ({ ...state, requests: res.data.data }))
+                } else{
+                }
+            })
+            .catch((err) => {
+                console.error(err);
+            })
+            .finally((res) => {
+                loaderSlice.setState({ isLoading: false });
+            });
+        },
+        getSuccessOrders:(value)=>{
+            getOrders(value)
+            .then((res)=> {
+                if(res.data.status == 'success'){
+                    set(state => ({ ...state, successfullOrders: res.data.data }))
+                } else{
+                }
+            })
+            .catch((err) => {
+                console.error(err);
+            })
+            .finally((res) => {
+                loaderSlice.setState({ isLoading: false });
+            });
+        }
     })
 );
 

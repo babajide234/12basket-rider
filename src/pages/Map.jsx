@@ -142,7 +142,7 @@ const Map = () => {
             ): <></>
         }
         
-        <div className={`w-11/12  mx-auto px-5 py-5 rounded-2xl absolute bottom-10 left-5 shadow-lg z-40 bg-white flex flex-col`}>
+        <div className={`w-11/12  mx-auto px-5 py-5 rounded-2xl absolute bottom-5 left-5 shadow-lg z-40 bg-white flex flex-col`}>
             
             <div onClick={()=>setShowOrder(!showOrder)} className=" flex justify-between items-center  py-2">
                 <h2 className=" font-bold text-lg ">{showOrder ? 'Orders' : 'Requests'}</h2>
