@@ -8,10 +8,12 @@ import orderSlice from './store/oderStore';
 import userSlice from './store/userStore';
 
 function App() {
+  
   const message = loaderSlice((state) => state.message)
   const type = loaderSlice((state) => state.type)
   const clear = loaderSlice((state) => state.clear)
   const setOrder = orderSlice((state) => state.setOrder);
+  const orders = orderSlice((state) => state.orders);
   const token = userSlice((state) => state.token);
 
   const clearMesage = () => {
@@ -32,17 +34,23 @@ function App() {
   },[type, message])
 
   useEffect(()=>{
-    const data ={
-      token: token,
-      reference_code: "",
-      account: "rider", 
-      from: "",
-      to: "",
-      payment_status: "", 
-      order_status: "" 
-  }
-    setOrder(data)
-  },[setOrder])
+
+    if(token != ''){
+
+      const data ={
+        token: token,
+        reference_code: "",
+        account: "rider", 
+        from: "",
+        to: "",
+        payment_status: "", 
+        order_status: "Request" 
+      }
+      setOrder(data)
+    }
+  },[setOrder, token])
+
+
   return (
     <>
       <RouterProvider router={router}/>

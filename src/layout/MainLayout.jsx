@@ -17,10 +17,10 @@ const Nav = ({ open,openMenu })=>{
     <div className=" fixed top-10 left-1/2 transform -translate-x-1/2 w-[90%] mx-auto rounded-2xl flex justify-between z-50 px-5 py-4 bg-white shadow-2xl">
         <button onClick={openMenu} className=' bg-white w-10 h-10 text-2xl font-bold rounded-full flex justify-center items-center'> <RiMenu2Line/> </button>
 
-        <label className="relative flex justify-between items-center group text-xl">
+        {/* <label className="relative flex justify-between items-center group text-xl">
           <input type="checkbox" onChange={ open } className="absolute left-1/2 -translate-x-1/2 w-full h-full peer appearance-none rounded-md" />
           <span className="w-20 h-11 flex items-center flex-shrink-0 ml-4 p-1 bg-gray-300 rounded-full duration-300 ease-in-out peer-checked:bg-[#8C2D29] after:w-9 after:h-9 after:bg-white after:rounded-full after:shadow-md after:duration-300 peer-checked:after:translate-x-9 group-hover:after:translate-x-1"></span>
-        </label>
+        </label> */}
     </div>
   )
 }
@@ -34,12 +34,12 @@ const Menu = ({ open,close })=>{
   }
 
   return (
-    <div className={`fixed top-0 ${open ? 'w-3/4 px-10 py-20 left-0 ':' w-0 -left-96'} overflow-hidden  bg-primary h-screen z-50 `}>
+    <div className={`fixed top-0 ${open ? 'w-3/4 px-10 py-20 left-0 ':' hidden w-0 -left-96'} overflow-hidden  bg-primary h-screen z-50 `}>
       <button onClick={close} className=" absolute top-5 right-5 w-10 h-10 flex justify-center items-center rounded-full bg-gray-900/10 text-white"><MdOutlineClose/></button>
 
       <div className=" flex flex-col justify-between w-full h-full">
         <div className="">
-          <Link className=' border-b border-solid border-white py-4 flex items-center text-white font-bold text-xl'> <span className=" mr-5"><RiNotification3Line/></span> Notifications</Link>
+          {/* <Link  to='/notifications' className=' border-b border-solid border-white py-4 flex items-center text-white font-bold text-xl'> <span className=" mr-5"><RiNotification3Line/></span> Notifications</Link> */}
         </div>
         {
           isLoggedIn ? 
@@ -54,7 +54,7 @@ const Menu = ({ open,close })=>{
 
 export const MainLayout = () => {
   const [ offline , setOfline ] = useState(true);
-  const [ menu , setMenu ] = useState(true);
+  const [ menu , setMenu ] = useState(false);
 
   return (
     <Container>

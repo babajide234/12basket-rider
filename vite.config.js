@@ -12,8 +12,8 @@ export default defineConfig({
         enabled: true
       },
       manifest: {
-        name: '12baskets ',
-        short_name: '12baskets',
+        name: '12baskets Rider',
+        short_name: '12baskets Rider',
         description: '12baskets mobile food delivery service fo 12baskets Stores',
         theme_color: '#ffffff',
         icons: [

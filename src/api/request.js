@@ -22,7 +22,15 @@ export const login = async (data) =>{
 }
 
 export const getOrders = async (data) =>{
-    return instance.post('/order/details', data)
+    return instance.post('order/details', data)
+}
+
+export const completeOrder = async (data) =>{
+    return instance.post('order/report', data)
+}
+
+export const acceptOrders = async (data) =>{
+    return instance.post('order/accept-delivery', data)
 }
 
 export const acceptOrder = async (data) =>{

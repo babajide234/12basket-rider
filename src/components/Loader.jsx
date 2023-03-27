@@ -4,7 +4,7 @@ import loaderSlice from '../store/loaderStore';
 
 const Loader = () => {
   const isLoading = loaderSlice((state) => state.isLoading)
-
+  
   return (
     <div className={`w-full h-screen fixed top-0 left-0 bg-slate-100/25  justify-center items-center ${isLoading ? 'flex' : 'hidden'}`}>
 
