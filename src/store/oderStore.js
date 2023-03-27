@@ -12,11 +12,11 @@ const orderSlice = create(
             .then((res)=> {
                 if(res.data.status == 'success'){
                     set(state => ({ ...state, orders: res.data.data }))
-                    loaderSlice.setState({ message: res.data.message });
-                    loaderSlice.setState({ type: res.data.status });
+                    // loaderSlice.setState({ message: res.data.message });
+                    // loaderSlice.setState({ type: res.data.status });
                 } else{
-                    loaderSlice.setState({ message: res.data.message });
-                    loaderSlice.setState({ type: res.data.status });
+                    // loaderSlice.setState({ message: res.data.message });
+                    // loaderSlice.setState({ type: res.data.status });
                 }
             })
             .catch((err) => {
