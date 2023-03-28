@@ -6,7 +6,7 @@ import userSlice from "./userStore";
 const orderSlice = create(
     (set, get) => ({
         orders:[],
-        order:{},
+        order:null,
         requests:null,
         successfullOrders:null,
         setOrder:(value)=> {

@@ -168,7 +168,7 @@ const Map = () => {
                                 </div> 
                                 {
                                     item.order_status == "Delivery" ? 
-                                    <button onClick={()=> showDetails(item.reference_code)} className=' bg-primary text-white rounded-lg absolute bottom-2 right-2 px-2 py-1'>View Details</button> 
+                                    <Link to={`/orders/${item.reference_code} `}  className=' bg-primary text-white rounded-lg absolute bottom-2 right-2 px-2 py-1'>View Details</Link> 
                                     :<button onClick={()=>handleAccept(item.reference_code)} className=' bg-primary text-white rounded-lg absolute bottom-2 right-2 px-2 py-1'>Accept Order</button> 
                                 }
                             </div>
@@ -188,7 +188,7 @@ const Map = () => {
                     <p className=" text-md">Customer Information</p>
                 </div>
                 {
-                    Object.keys(order).length !== 0  ? (
+                    order !== null  ? (
                         <div className="overflow-auto w-full h-full pb-20">
                             <h3 className=" mb-5 font-bold text-xl">Destination</h3>
                             <div className=" mb-5">

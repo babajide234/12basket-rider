@@ -6,6 +6,7 @@ import Login from "../pages/Auth/Login";
 import Landing from "../pages/Landing";
 import Map from "../pages/Map";
 import Notification from "../pages/Notification";
+import OrderDetails from "../pages/OrderDetails";
 import Orders from "../pages/Orders";
 import Profile from "../pages/Profile";
 
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
         {
           path: "/orders",
           element: <Orders/>
+        },
+        {
+          path: "/orders/:ref",
+          element: <OrderDetails/>
         },
         {
           path: "/profile",
